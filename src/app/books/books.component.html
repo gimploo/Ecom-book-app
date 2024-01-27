@@ -1,0 +1,11 @@
+<div *ngIf="listOfBooks.length === 0; else showBooks">
+    No books!
+</div>
+
+<ng-template #showBooks>
+    <div *ngFor="let book of listOfBooks" >
+        <app-bookcard [data]="book"> </app-bookcard>
+    </div>
+</ng-template>
+
+
