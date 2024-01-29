@@ -5,6 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BooksComponent } from './books/books.component';
 import { BookcardComponent } from './bookcard/bookcard.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,11 +14,13 @@ import { BookcardComponent } from './bookcard/bookcard.component';
     AppComponent,
     NavbarComponent,
     BooksComponent,
-    BookcardComponent
+    BookcardComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   bootstrap: [
     AppComponent
