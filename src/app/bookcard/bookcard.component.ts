@@ -9,5 +9,14 @@ import { BookData } from '../shared/models/BookData';
 export class BookcardComponent {
 
   @Input() data!: BookData;
+  public isDescriptionVisible: boolean = false;
+
+  showDescription() {
+    this.isDescriptionVisible = true;
+  }
+
+  hideDescription() {
+    this.isDescriptionVisible = false;
+  }
 
 }

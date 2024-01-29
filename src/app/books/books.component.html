@@ -3,7 +3,7 @@
 </div>
 
 <ng-template #showBooks>
-    <div *ngFor="let book of listOfBooks" >
+    <div *ngFor="let book of listOfBooks; let idx=index" >
         <app-bookcard [data]="book"> </app-bookcard>
     </div>
 </ng-template>

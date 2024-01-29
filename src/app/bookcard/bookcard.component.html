@@ -1,7 +1,12 @@
-<div class="bookcontainer" >
+<div class="bookcontainer" (mouseenter)="showDescription()" (mouseleave)="hideDescription()">
     <div class="bookcontainer-title">{{data.title}} </div>
     <img class="bookcontainer-img" src={{data.img}} alt='Image of a book' />
     <div class="bookcontainer-price">${{data.price}} </div>
+
+    <div *ngIf="isDescriptionVisible" class="bookcontainer-desc">
+        {{data.description}} 
+    </div>
+
     <div class="bookcontainer-cart"> 
         <label>Add to cart </label>
         <button>🛒</button>
